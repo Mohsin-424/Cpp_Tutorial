@@ -4,30 +4,32 @@
 // int main()
 // {
 //     cout << "Hello, World!" << endl;
+//     cout << " I am a cpp program " << endl;
+//     cout << " How are you " << endl;
 //     return 0;
 // }
 
-// Basic Data Types
-#include <iostream>  // Include the library for input and output
-using namespace std; // Use the standard namespace
+// // Basic Data Types
+// #include <iostream>  // Include the library for input and output
+// using namespace std; // Use the standard namespace
 
-int main()
-{
-    int age = 20;              // Integer to store age
-    float height = 5.9;        // Float for height (decimal values)
-    double pi = 3.14159265359; // Double for more precise decimal values
-    char grade = 'A';          // Char to store a single character
-    bool isStudent = true;     // Boolean to represent true/false (1/0)
+// int main() // data type  to define main function
+// {
+//     int age = 20;              // Integer to store age
+//     float height = 5.9;        // Float for height (decimal values)
+//     double pi = 3.14159265359; // Double for more precise decimal values
+//     char grade = 'A';          // Char to store a single character
+//     bool isStudent = true;     // Boolean to represent true/false (1/0)
 
-    // Display all the values
-    cout << "Age: " << age << endl;
-    cout << "Height: " << height << endl;
-    cout << "Pi: " << pi << endl;
-    cout << "Grade: " << grade << endl;
-    cout << "Is Student: " << isStudent << endl;
+//     // Display all the values
+//     cout << "Age: " << age << endl;
+//     cout << "Height: " << height << endl;
+//     cout << "Pi: " << pi << endl;
+//     cout << "Grade: " << grade << endl;
+//     cout << "Is Student: " << isStudent << endl;
 
-    return 0; // Indicate the program ran successfully
-}
+//     return 0; //  the program is running successfully
+// }
 
 //  Arrays and Pointers
 // #include <iostream>
@@ -91,7 +93,6 @@ int main()
 // Examples Area of Circle
 // #include <iostream>
 // using namespace std;
-
 // int main()
 // {
 //     double radius, area;       // Double for radius and area (to allow decimal precision)
@@ -112,7 +113,7 @@ int main()
 // #include <iostream>
 // using namespace std;
 
-// Function to swap values using pointers ............
+// // Function to swap values using pointers ............
 
 // void swap(int *a, int *b)
 // {
