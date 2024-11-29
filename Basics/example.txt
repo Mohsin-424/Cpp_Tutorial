@@ -1,0 +1,117 @@
+This is an example of file handling in C++.
+
+To understand Object-Oriented Programming (OOP) concepts in detail, we can break the learning process into two components: theoretical understanding and hands-on exercises with examples. Here's a detailed theoretical method to grasp each concept along with examples.
+
+1. Classes and Objects
+Theory:
+A class is a blueprint for creating objects. It defines the attributes (data) and behaviors (methods).
+An object is an instance of a class.
+Key Points:
+Understand syntax for declaring classes and objects.
+Learn about attributes (variables) and methods (functions) inside a class.
+Example Problem:
+Define a Student class with attributes like name and roll_number and a method to display student details.
+cpp
+Copy code
+class Student {
+public:
+    string name;
+    int roll_number;
+
+    void display() {
+        cout << "Name: " << name << ", Roll Number: " << roll_number << endl;
+    }
+};
+2. Data Encapsulation
+Theory:
+Encapsulation bundles the data and methods that operate on the data together.
+Access modifiers (private, protected, public) control access to the members of the class.
+Key Points:
+Focus on get and set methods for controlled data access.
+Understand the role of encapsulation in security and modular design.
+Example Problem:
+Create a BankAccount class with private data members like account_balance. Use getter and setter functions to access the balance safely.
+3. Constructors and Destructors
+Theory:
+A constructor initializes an object when it is created.
+A destructor cleans up resources when an object is destroyed.
+Key Points:
+Learn about parameterized constructors and default constructors.
+Understand when destructors are automatically called.
+Example Problem:
+Create a Vehicle class with a constructor to initialize attributes like model and year. Use a destructor to print a message when an object is destroyed.
+4. Function Overloading
+Theory:
+Function overloading allows multiple functions with the same name but different parameters.
+It enhances code readability and reusability.
+Key Points:
+Focus on parameter types, numbers, and default arguments.
+Example Problem:
+Write a class MathOperations with overloaded methods for calculating the area of a circle (single parameter) and a rectangle (two parameters).
+5. Operator Overloading
+Theory:
+Operators like +, -, and * can be overloaded to work with user-defined data types.
+Key Points:
+Learn how to overload an operator using a member function or friend function.
+Example Problem:
+Overload the + operator to add two Complex numbers.
+6. Inheritance
+Theory:
+Inheritance allows one class (derived) to reuse the properties and methods of another (base) class.
+Key Points:
+Study types of inheritance: single, multiple, multilevel, and hierarchical.
+Learn the syntax for inheritance and overriding methods.
+Example Problem:
+Create a Shape class with a draw() method. Derive Circle and Rectangle classes that override the draw() method.
+7. Polymorphism
+Theory:
+Polymorphism allows a single interface to represent different underlying types.
+Compile-time polymorphism: Achieved using function overloading and operator overloading.
+Runtime polymorphism: Achieved using virtual functions.
+Key Points:
+Understand virtual functions and overriding.
+Explore the concept of pointers to base class.
+Example Problem:
+Implement a base class Animal with a virtual sound() method. Derive Dog and Cat classes to provide specific implementations of sound().
+8. Abstract Classes and Interfaces
+Theory:
+An abstract class is a class that cannot be instantiated and typically contains at least one pure virtual function.
+Abstract classes serve as a blueprint for derived classes.
+Key Points:
+Understand the use of = 0 to declare pure virtual functions.
+Learn the difference between abstract classes and interfaces.
+Example Problem:
+Create an abstract class Shape with a pure virtual method area(). Implement Circle and Square classes that calculate their respective areas.
+9. Composition and Aggregation
+Theory:
+Composition: A "has-a" relationship where the lifespan of the composed object is tied to the owner.
+Aggregation: A "has-a" relationship where the composed object can exist independently.
+Key Points:
+Study differences between composition and aggregation.
+Understand when to use which.
+Example Problem:
+Implement a Car class that contains an Engine class object (composition).
+10. Templates
+Theory:
+Templates enable generic programming by allowing functions or classes to operate on any data type.
+Key Points:
+Learn syntax for function templates and class templates.
+Understand the advantages of reusability.
+Example Problem:
+Write a template class Calculator that works with both int and double types.
+11. Exception Handling
+Theory:
+Exceptions are runtime errors that disrupt the normal flow of a program.
+Exception handling ensures graceful recovery using try, catch, and throw.
+Key Points:
+Understand exception propagation and multiple catch blocks.
+Example Problem:
+Write a program to divide two numbers. Throw an exception if the denominator is zero.
+12. File Processing
+Theory:
+File I/O allows a program to read from or write to files.
+Understand how to use file streams: ifstream and ofstream.
+Key Points:
+Learn the syntax for opening, reading, writing, and closing files.
+Example Problem:
+Write a program that stores user input in a file and reads it back.

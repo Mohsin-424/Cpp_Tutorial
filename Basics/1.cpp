@@ -12,14 +12,13 @@
 // // Basic Data Types
 // #include <iostream>  // Include the library for input and output
 // using namespace std; // Use the standard namespace
-
-// int main() // data type  to define main function
+// int main()           // data type  to define main function
 // {
 //     int age = 20;              // Integer to store age
 //     float height = 5.9;        // Float for height (decimal values)
 //     double pi = 3.14159265359; // Double for more precise decimal values
 //     char grade = 'A';          // Char to store a single character
-//     bool isStudent = true;     // Boolean to represent true/false (1/0)
+//     bool isStudent = false;    // Boolean to represent true/false (1/0)
 
 //     // Display all the values
 //     cout << "Age: " << age << endl;
@@ -46,33 +45,10 @@
 //     return 0;
 // }
 
-//  Structs
-// #include <iostream>
-// using namespace std;
-
-// A struct groups different data types into one unit
-// struct Student
-// {
-//     string name; // String to store the name
-//     int age;     // Integer for age
-//     char grade;  // Char for grade
-// };
-
-// int main()
-// {
-//     Student student1 = {"Alice", 18, 'A'}; // Initialize struct with values
-
-//     // Accessing struct members using dot (.) operator
-//     cout << "Name: " << student1.name << ", Age: " << student1.age << ", Grade: " << student1.grade << endl;
-
-//     return 0;
-// }
-
 // Void Function
 // #include <iostream>
 // using namespace std;
-
-// A struct groups different data types into one unit
+// // A struct groups different data types into one unit
 // struct Student
 // {
 //     string name; // String to store the name
@@ -82,7 +58,7 @@
 
 // int main()
 // {
-//     Student student1 = {"Alice", 18, 'A'}; // Initialize struct with values
+//     Student student1 = {"Mohsin", 24, 'A'}; // Initialize struct with values
 
 //     // Accessing struct members using dot (.) operator
 //     cout << "Name: " << student1.name << ", Age: " << student1.age << ", Grade: " << student1.grade << endl;
@@ -110,6 +86,7 @@
 // }
 
 // Swap Two Numbers using Pointers
+
 // #include <iostream>
 // using namespace std;
 
