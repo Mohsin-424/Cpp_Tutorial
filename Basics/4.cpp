@@ -75,44 +75,44 @@
 // }
 
 // 3. Multiple Inheritance
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-class Engine
-{
-public:
-    void start()
-    {
-        cout << "Engine started." << endl;
-    }
-};
+// class Engine
+// {
+// public:
+//     void start()
+//     {
+//         cout << "Engine started." << endl;
+//     }
+// };
 
-class Wheels
-{
-public:
-    void rotate()
-    {
-        cout << "Wheels are rotating." << endl;
-    }
-};
+// class Wheels
+// {
+// public:
+//     void rotate()
+//     {
+//         cout << "Wheels are rotating." << endl;
+//     }
+// };
 
-class Car : public Engine, public Wheels
-{
-public:
-    void drive()
-    {
-        cout << "Car is driving." << endl;
-    }
-};
+// class Car : public Engine, public Wheels
+// {
+// public:
+//     void drive()
+//     {
+//         cout << "Car is driving." << endl;
+//     }
+// };
 
-int main()
-{
-    Car myCar;
-    myCar.start();  // From Engine
-    myCar.rotate(); // From Wheels
-    myCar.drive();  // Defined in Car
-    return 0;
-}
+// int main()
+// {
+//     Car myCar;
+//     myCar.start();  // From Engine
+//     myCar.rotate(); // From Wheels
+//     myCar.drive();  // Defined in Car
+//     return 0;
+// }
 
 // 4.Hierarchial __inheritance
 
@@ -145,6 +145,14 @@ public:
         cout << "This cat can meow." << endl;
     }
 };
+class Horse : public Animal
+{
+public:
+    void Run()
+    {
+        cout << "This horse can run fast" << endl;
+    }
+};
 
 int main()
 {
@@ -156,5 +164,8 @@ int main()
 
     myCat.eat();
     myCat.meow();
+    Horse myHorse;
+    myHorse.Run();
+
     return 0;
 }
