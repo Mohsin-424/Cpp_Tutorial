@@ -20,29 +20,28 @@
 // Classes and Object
 // #include <iostream>
 // using namespace std;
-
-// class Student
+// class Employee
 // {
-// public:
+// public: // Access Modifiers
 //     string name;
-//     int roll_no;
+//     int salary;
 
 //     void display()
 //     {
-//         cout << "Name: " << name << ", Roll No: " << roll_no << endl;
+//         cout << "Name: " << name << ",Salary: " << salary << endl;
 //     }
 // };
-
 // int main()
 // {
-//     Student s1;
-//     s1.name = "John";
-//     s1.roll_no = 101;
+//     Employee s1;
+//     s1.name = "Usman";
+//     s1.salary = 50000;
 //     s1.display();
 //     return 0;
 // }
 
-// Encapsulation
+// Encapsulation is a concept in which different objects works together for a same purpose / class.
+
 // #include <iostream>
 // using namespace std;
 
@@ -65,7 +64,7 @@
 // int main()
 // {
 //     BankAccount account;
-//     account.deposit(500);
+//     account.deposit(5000);
 //     account.showBalance();
 //     return 0;
 // }
@@ -93,7 +92,7 @@
 
 // int main()
 // {
-//     Car myCar;
+//     Car yourCar;
 //     return 0;
 // }
 
@@ -116,62 +115,106 @@
 //         return a + b;
 //     }
 // };
-
 // int main()
 // {
 //     Calculator calc;
-//     cout << "Sum (int): " << calc.add(3, 5) << endl;
-//     cout << "Sum (double): " << calc.add(3.2, 5.4) << endl;
+//     cout << "Sum (int): " << calc.add(39, 5) << endl;
+//     cout << "Sum (double): " << calc.add(3.92, 785.4) << endl;
 //     return 0;
 // }
 
 // Access Modifiers
+// #include <iostream>
+// using namespace std;
+
+// class AccessDemo
+// {
+// public: // Public members
+//     string name;
+//     void setName(string n)
+//     {
+//         name = n; // Modifies public member
+//     }
+
+// private: // Private members
+//     int age;
+//     void setAge(int a)
+//     {
+//         age = a; // Can only be used inside this class
+//     }
+
+// protected: // Protected members
+//     string protectedData = "This is protected";
+// };
+
+// class DerivedDemo : public AccessDemo
+// {
+// public:
+//     void showProtectedData()
+//     {
+//         cout << "Accessing protected data: " << protectedData << endl;
+//     }
+// };
+
+// int main()
+// {
+//     AccessDemo obj;
+
+//     // Public access
+//     obj.setName("John");
+//     cout << "Name: " << obj.name << endl;
+
+//     // Private access
+//     // obj.setAge(25); // ERROR: Private method, cannot access outside class
+
+//     // Protected access (from derived class)
+//     DerivedDemo derivedObj;
+//     derivedObj.showProtectedData(); // Can access protectedData via derived class
+
+//     return 0;
+// }
+
+// Abstraction
+
 #include <iostream>
 using namespace std;
 
-class AccessDemo
-{
-public: // Public members
-    string name;
-    void setName(string n)
-    {
-        name = n; // Modifies public member
-    }
-
-private: // Private members
-    int age;
-    void setAge(int a)
-    {
-        age = a; // Can only be used inside this class
-    }
-
-protected: // Protected members
-    string protectedData = "This is protected";
+class Animal
+{ // Abstract class
+public:
+    virtual void sound() = 0; // Pure virtual function
 };
 
-class DerivedDemo : public AccessDemo
+class Cat : public Animal
 {
 public:
-    void showProtectedData()
+    void sound() override
     {
-        cout << "Accessing protected data: " << protectedData << endl;
+        cout << "Meau'n!\n";
     }
 };
 
 int main()
 {
-    AccessDemo obj;
-
-    // Public access
-    obj.setName("John");
-    cout << "Name: " << obj.name << endl;
-
-    // Private access
-    // obj.setAge(25); // ERROR: Private method, cannot access outside class
-
-    // Protected access (from derived class)
-    DerivedDemo derivedObj;
-    derivedObj.showProtectedData(); // Can access protectedData via derived class
-
+    Animal *a = new Cat(); // Pointer to abstract class
+    a->sound();            // Output: Woof!
+    delete a;
     return 0;
 }
+
+// examples 2 abstraction
+// #include <iostream>
+// using namespace std;
+
+// class Calculator
+// {
+// public:
+//     int add(int a, int b) { return a + b; }
+// };
+
+// int main()
+// {
+//     Calculator calc;
+//     cout << "Sum: " << calc.add(5, 3) << endl; // Output: Sum: 8
+//     return 0;
+// }
