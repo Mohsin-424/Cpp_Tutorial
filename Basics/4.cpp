@@ -116,56 +116,121 @@
 
 // 4.Hierarchial __inheritance
 
+// #include <iostream>
+// using namespace std;
+
+// class Animal
+// {
+// public:
+//     void eat()
+//     {
+//         cout << "This animal can eat." << endl;
+//     }
+// };
+
+// class Dog : public Animal
+// {
+// public:
+//     void bark()
+//     {
+//         cout << "This dog can bark." << endl;
+//     }
+// };
+
+// class Cat : public Animal
+// {
+// public:
+//     void meow()
+//     {
+//         cout << "This cat can meow." << endl;
+//     }
+// };
+// class Horse : public Animal
+// {
+// public:
+//     void Run()
+//     {
+//         cout << "This horse can run fast" << endl;
+//     }
+// };
+
+// int main()
+// {
+//     Dog myDog;
+//     Cat myCat;
+
+//     myDog.eat();
+//     myDog.bark();
+
+//     myCat.eat();
+//     myCat.meow();
+//     Horse myHorse;
+//     myHorse.Run();
+
+//     return 0;
+// }
+
+// Polymorphism two greek words combination
+// Poly = Many
+// Morphism = Forms
+
 #include <iostream>
 using namespace std;
 
-class Animal
+// Base class
+class Shape
 {
 public:
-    void eat()
+    // Virtual function for runtime polymorphism
+    virtual void draw()
     {
-        cout << "This animal can eat." << endl;
+        cout << "Drawing a generic shape." << endl;
+    }
+    virtual ~Shape() {} // Virtual destructor
+};
+
+// Derived class 1
+class Circle : public Shape
+{
+public:
+    void draw() override
+    { // Override the virtual function
+        cout << "Drawing a Circle." << endl;
     }
 };
 
-class Dog : public Animal
+// Derived class 2
+class Rectangle : public Shape
 {
 public:
-    void bark()
-    {
-        cout << "This dog can bark." << endl;
+    void draw() override
+    { // Override the virtual function
+        cout << "Drawing a Rectangle." << endl;
     }
 };
 
-class Cat : public Animal
+// Function overloading (Compile-time polymorphism)
+int add(int a, int b)
 {
-public:
-    void meow()
-    {
-        cout << "This cat can meow." << endl;
-    }
-};
-class Horse : public Animal
-{
-public:
-    void Run()
-    {
-        cout << "This horse can run fast" << endl;
-    }
-};
+    return a + b;
+}
 
+double add(double a, double b)
+{
+    return a + b;
+}
+
+// Main function
 int main()
 {
-    Dog myDog;
-    Cat myCat;
+    // Runtime polymorphism
+    Shape *shape;        // Base class pointer
+    Circle circle;       // Derived class object
+    Rectangle rectangle; // Derived class object
 
-    myDog.eat();
-    myDog.bark();
+    shape = &circle;
+    shape->draw(); // Calls Circle's draw() method
 
-    myCat.eat();
-    myCat.meow();
-    Horse myHorse;
-    myHorse.Run();
-
-    return 0;
+    shape = &rectangle;
+    shape->draw(); // Calls Rectangle's draw() method
 }
