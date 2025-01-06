@@ -66,16 +66,16 @@ int main()
     return 0;
 }
 
-
-
-// Error Handlinng with File Handling 
+// Error Handlinng with File Handling
 #include <iostream>
 #include <fstream>
 using namespace std;
 
-int main() {
+int main()
+{
     ofstream outFile("data.txt");
-    if (!outFile) {
+    if (!outFile)
+    {
         cerr << "Error opening file!" << endl;
         return 1;
     }
@@ -84,19 +84,18 @@ int main() {
     outFile.close();
 
     ifstream inFile("data.txt");
-    if (!inFile) {
+    if (!inFile)
+    {
         cerr << "Error opening file!" << endl;
         return 1;
     }
 
     string line;
-    while (getline(inFile, line)) {
+    while (getline(inFile, line))
+    {
         cout << line << endl;
     }
     inFile.close();
 
     return 0;
 }
-
-
-
